@@ -25,6 +25,6 @@ The solution has 3 parts:
 
 ## Installation
 
-```sh
-curl -fsSL https://gist.github.com/mislav/5189704/raw/install.sh | bash -e
-```
+Append hacks/append-to-tmux-conf to your .tmux.conf file.
+Place hacks/tmux-vim-select-pane.sh in your $PATH.
+Bind CTRL-hjkl to CTRL-W hjkl in your vimrc.
