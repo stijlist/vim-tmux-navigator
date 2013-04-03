@@ -25,6 +25,12 @@ The solution has 3 parts:
 
 ## Installation
 
+I've tested this only on Arch Linux, and I've modified it slightly from
+mislav's original version. 
+
+If you're using tpope's Pathogen plugin, simply git clone this repo into your
+.vim/bundle directory. 
+
 Append hacks/append-to-tmux-conf to your .tmux.conf file.
+
 Place hacks/tmux-vim-select-pane.sh in your $PATH.
-Bind CTRL-hjkl to CTRL-W hjkl in your vimrc.
