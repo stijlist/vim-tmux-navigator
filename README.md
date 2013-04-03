@@ -1,3 +1,7 @@
+# mislav's tmux-navigator
+
+**The plugin and following readme are from https://gist.github.com/mislav/5189704/**
+
 I use tmux splits (panes). Inside one of these panes there's a Vim process, and it has its own splits (windows).
 
 In Vim I have key bindings `C-h/j/k/l` set to switch windows in the given direction. (Vim default mappings for windows switching are the same, but prefixed with `C-W`.) I'd like to **use the same keystrokes for switching tmux panes**.
