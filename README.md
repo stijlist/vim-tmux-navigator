@@ -2,6 +2,8 @@
 
 **The plugin and following readme are from https://gist.github.com/mislav/5189704/**
 
+======
+
 I use tmux splits (panes). Inside one of these panes there's a Vim process, and it has its own splits (windows).
 
 In Vim I have key bindings `C-h/j/k/l` set to switch windows in the given direction. (Vim default mappings for windows switching are the same, but prefixed with `C-W`.) I'd like to **use the same keystrokes for switching tmux panes**.
@@ -23,8 +25,20 @@ The solution has 3 parts:
 2. `tmux-vim-select-pane` checks if the foreground process in the current tmux pane is Vim, then forwards the original keystroke to the vim process. Otherwise it simply switches tmux panes.
 3. In Vim, I set bindings for the same keystrokes to a custom function. The function tries to switch windows in the given direction. If the window didn't change, that means there are no more windows in the given direction inside vim, and it forwards the pane switching command to tmux by shelling out to `tmux select-pane`.
 
+========
+
+
 ## Installation
 
+I've tested this particular package of mislav's scripts only on Arch Linux, and
+I've modified it slightly from mislav's original version. 
+
+If you're using tpope's Pathogen plugin, simply git clone this repo into your
+.vim/bundle directory. 
+
 Append hacks/append-to-tmux-conf to your .tmux.conf file.
+
 Place hacks/tmux-vim-select-pane.sh in your $PATH.
-Bind CTRL-hjkl to CTRL-W hjkl in your vimrc.
+
+I think that's it. Send me a pull request if you've got any ideas for
+improvements. 
